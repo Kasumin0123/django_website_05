@@ -82,24 +82,24 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # }
 
 # 本番環境（Render）用
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'db_django',
-#         'USER': 'db_django_user',
-#         'PASSWORD': 'KXLeRwcPugfp9wbEr8xVX2EA9E46sMX4',
-#         'HOST': 'dpg-chqvkpm4dad3eommue3g-a',
-#         'PORT': '5432',
-#      }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_django',
+        'USER': 'db_django_user',
+        'PASSWORD': 'KXLeRwcPugfp9wbEr8xVX2EA9E46sMX4',
+        'HOST': 'dpg-chqvkpm4dad3eommue3g-a',
+        'PORT': '5432',
+     }
+}
 
 # 開発環境用
-import dj_database_url
-from dotenv import (find_dotenv, load_dotenv)
-load_dotenv(find_dotenv())
-DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600),
-}
+# import dj_database_url
+# from dotenv import (find_dotenv, load_dotenv)
+# load_dotenv(find_dotenv())
+# DATABASES = {
+#     'default': dj_database_url.config(conn_max_age=600),
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
